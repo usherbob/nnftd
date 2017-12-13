@@ -16,7 +16,7 @@ http://www.iro.umontreal.ca/~lisa/deep/data/mnist/mnist.pkl.gz
 
 #### Libraries
 # Standard library
-import _Pickle
+import _pickle as cPickle
 
 # Third-party libraries
 import numpy as np
@@ -46,7 +46,7 @@ def load_data():
     ``load_data_nn``.
     """
     f = open('../data/mnist.pkl', 'rb')
-    training_data, validation_data, test_data = _Pickle.load(f)
+    training_data, validation_data, test_data = cPickle.load(f)
     f.close()
     return (training_data, validation_data, test_data)
 
